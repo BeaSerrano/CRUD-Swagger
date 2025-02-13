@@ -4,28 +4,33 @@ module.exports = {
             Task:{
                 type:'object',
                 properties:{
-                    _id:{
-                        type:'objectId',
-                        description:"task identification number",
-                        example:"6201064b0028de7866e2b2c4"
-                    },
                     title:{
                         type:'string',
-                        description:"title task",
-                        example:"Aprender swagger"
-                    },
-                    completed:{
-                        type:'boolean',
-                        description:"task completed or not",
-                        example:"false"
+                        description:"task title",
+                        example:"Aprender Swagger"
                     }
                 }
             },
-            TaskId: {
-                type: 'string',
-                description: 'id task',
-                example: "6201064b0028de7866e2b2c4"
-            }
+            TaskInput: {
+                type: "object",
+                properties: {
+                    title: {
+                        type: "string",
+                        description: "Task's title",
+                        example: "make an excellent readme",
+                    },
+                    completed: {
+                        type: "boolean",
+                        description: "The status of the task",
+                        example: false,
+                    },
+                },
+            },
+            _id: {
+                type: "objectId",
+                description: "An id of a task",
+                example: "6201064b0028de7866e2b2c4",
+            },
         }
     }
 }
