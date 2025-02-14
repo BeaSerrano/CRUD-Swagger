@@ -7,6 +7,7 @@ const swaggerUI = require('swagger-ui-express')
 const docs = require('./docs/index');
 
 app.use(express.json());
+app.use(express.urlencoded({extended : true}))
 
 app.use('/', routes);
 
